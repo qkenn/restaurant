@@ -1,4 +1,4 @@
-export default (tagName, attributes = []) => {
+export default (tagName = 'div', attributes = []) => {
   // create element based on tag
   const newElement = document.createElement(tagName);
 
