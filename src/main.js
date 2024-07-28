@@ -5,5 +5,13 @@ import img from './images/vibrant-restaurant-exterior-at-dusk.jpg';
 // document.getElementById('page-img').setAttribute('src', img);
 
 const mainWrapper = document.getElementById('content');
+const btns = document.getElementById('btn-container');
+
+btns.addEventListener('click', (e) => {
+  // event is only for btns
+  if (!e.target.closest('.btn')) return;
+
+  console.log('clicked');
+});
 
 mainWrapper.appendChild(initialRender());
