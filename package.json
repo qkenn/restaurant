@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "export NODE_ENV=development && webpack serve --open",
-    "build": "export NODE_ENV=production && webpack"
+    "build": "export NODE_ENV=production && webpack",
+    "gh-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "qkenn",
