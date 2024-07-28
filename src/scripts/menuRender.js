@@ -4,11 +4,10 @@ export default () => {
   const pageWrapper = createTag('div');
 
   const title = createTag('h2', [['class', 'page-title']]);
-  title.textContent = 'Homepage';
+  title.textContent = 'Menu';
 
   const paragraph = createTag('p', [['class', 'info']]);
-  paragraph.textContent =
-    'Step into Yume Ranch and be transported to the vibrant streets of Tokyo. Our cozy restaurant is designed to evoke the warmth hospitality of traditional Japanese culture, with rich wood accents, paper lanterns, and delicate cherry blossom motifs.';
+  paragraph.textContent = 'menu content';
 
   pageWrapper.appendChild(title);
   pageWrapper.appendChild(paragraph);
