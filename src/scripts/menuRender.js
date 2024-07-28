@@ -16,26 +16,22 @@ export default () => {
   ]);
   imgContainer.appendChild(img);
 
-  const description = createTag('div', [['class', 'description']]);
-
   const menu = createTag('ul', [['class', 'menu']]);
 
-  const item1 = createTag('li', [['class', 'menu-item']]);
-  item1.textContent = 'Appetizers';
-  const item2 = createTag('li', [['class', 'menu-item']]);
-  item2.textContent = 'Sushi & Sashimi';
-  const item3 = createTag('li', [['class', 'menu-item']]);
-  item3.textContent = 'Ramen and Udon';
-  const item4 = createTag('li', [['class', 'menu-item']]);
-  item4.textContent = 'Entrees';
-  const item5 = createTag('li', [['class', 'menu-item']]);
-  item5.textContent = 'Desserts';
-  const item6 = createTag('li', [['class', 'menu-item']]);
-  item6.textContent = 'Drinks';
-
-  const menuItems = [item1, item2, item3, item4, item5, item6];
+  const MenuContent = [
+    'Appetizers',
+    'Sushi & Sashimi',
+    'Ramen and Udon',
+    'Entrees',
+    'Desserts',
+    'Drinks',
+  ];
+  const menuItems = [];
+  for (let i = 0; i < 6; i++) {
+    menuItems.push(createTag('li', [['class', 'menu-item']]));
+  }
+  menuItems.forEach((item, key) => (item.textContent = MenuContent[key]));
   menuItems.forEach((item) => menu.appendChild(item));
-  description.appendChild(menu);
 
   const elements = [title, imgContainer, menu];
   elements.forEach((element) => pageWrapper.appendChild(element));
