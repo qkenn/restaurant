@@ -16,8 +16,6 @@ export default () => {
   ]);
   imgContainer.appendChild(img);
 
-  const description = createTag('div', [['class', 'description']]);
-
   const descriptionInfo = createTag('p', [['class', 'info']]);
   descriptionInfo.textContent =
     'Step into Yume Ranch and be transported to the vibrant streets of Tokyo. Our cozy restaurant is designed to evoke the warmth hospitality of traditional Japanese culture, with rich wood accents, paper lanterns, and delicate cherry blossom motifs.';
@@ -34,15 +32,16 @@ export default () => {
   secondHeadlineInfo.textContent =
     'Unwind in our intimate dining area, surrounded by the soft glow of lanterns and the gentle hum of traditional Japanese music. Our attentive staff will guide you through our extensive menu, happy to recommend their favorite dishes or help you create a customized meal.';
 
-  description.appendChild(descriptionInfo);
-  description.appendChild(firstHeadline);
-  description.appendChild(firstHeadlineInfo);
-  description.appendChild(secondHeadline);
-  description.appendChild(secondHeadlineInfo);
-
-  pageWrapper.appendChild(title);
-  pageWrapper.appendChild(imgContainer);
-  pageWrapper.appendChild(description);
+  const elements = [
+    title,
+    imgContainer,
+    descriptionInfo,
+    firstHeadline,
+    firstHeadlineInfo,
+    secondHeadline,
+    secondHeadlineInfo,
+  ];
+  elements.forEach((element) => pageWrapper.appendChild(element));
 
   return pageWrapper;
 };
